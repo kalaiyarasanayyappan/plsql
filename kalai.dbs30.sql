@@ -256,7 +256,7 @@ WHEN INITIAL_DEPOSIT=0 THEN 'very low'
 ELSE 'invalid' END DEPOSIT_STATUS
 FROM CUSTOMER_PERSONAL_INFO CPI
 INNER JOIN ACCOUNT_INFO AI
-ON CPI.CUSTOMER_ID=AI.CUSTOMER_ID;
+ON CPI.CUSTOMER_ID=AI.CUSTOMER_ID order by interest desc;
 
 
 -----24."Write a query which will display customer id, customer name,  account number, account type, bank name, ifsc code, initial deposit amount
